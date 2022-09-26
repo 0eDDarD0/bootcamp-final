@@ -25,8 +25,9 @@ public class TutorialController {
 	
 	///////////////////////////////////EMPTY CALL
 	@GetMapping("")
-	String simpleResponse() {
-		return("Llamada vacía");
+	ResponseEntity<String> simpleResponse() {
+		// return("Llamada vacía");
+        return new ResponseEntity<String>("Welcome to tutorials API", HttpStatus.OK);
 	}
 	
 	
